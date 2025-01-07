@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: whitesmoke;
+            font-family: Arial, sans-serif;
+            background: #0a0c1b;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+        header{
+            text-align: center;
+            padding: 20px;
+            background-color: #004d00;
+            background: rgb(2, 255, 2)
+            box-shadow  0 0 10px rgba(0, 255, 0, 0.5);
+        }
+        header h1{
+            color: #00ff00;
+            font-size: 2.5em;
+            text-shadow: 0 0 15px #00ff00;
+        }
+        header p{
+            color: #b3b3b3;
+            margin-top: 10px;
+        }
+        nav{
+            display: flex;
+            justify-content: center;
+            background: rgba(10, 12, 27, 0.9);
+            box-shadow: 0 0 15px rgba(0, 100, 0, 0.5);
+            padding: 10px 20px;
+        }
+        nav a{
+            color: #b3b3b3;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        nav a:hover{
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00;
+        }
+        .section{
+            text-align: center;
+            margin: 30px 20px;
+        }
+        .section h2{
+            font-size: 2.2em;
+            color: #00ff00;
+            text-shadow: 0 0 10px #00ff00, 0 0 20px #004d00;
+            margin-bottom: 15px;
+        }
+        .section p{
+            color: #b3b3b3;
+        }
+        .donation-form{
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background: rgba(10, 12, 27, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 100, 0, 0.5), 0 0 25px rgba(0, 100, 0, 0.5);
+        }
+        .donation-form h2{
+            font-size: 2.2em;
+            color: #006400;
+            text-shadow: 0 0 10px #006400, 0 0 20px #004d00;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .donation-form label{
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #cecbcb;
+            display: block;
+        }
+        .donation-form input, .donation-form select, .donation-form textarea{
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 2px solid #006400;
+            border-radius: 5px;
+            background: #141629;
+            color: #ffffff;
+            outline: none;
+            box-shadow: inset 0 0 10px rgba(0, 100, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .donation-form input::placeholder, .donation-form textarea::placeholder{
+            color: #cdcccc;
+        }
+        .donation-form input:focus,
+        .donation-form select:focus,
+        .donation-form textarea:focus{
+            border-color: #228b22; 
+            box-shadow: 0 0 15px rgba(34, 139, 34, 0.5), inset 0 0 15px rgba(0, 100, 0, 0.5);
+        }
+        .donation-form button{
+            background: linear-gradient(90deg, #006400, #228b22);
+            color: white;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s ease;
+            box-shadow: 0 0 15px rgba(0, 100, 0, 0.5), 0 0 20px rgba(34, 139, 34, 0.5);
+        }
+        .donation-form button:hover{
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(0, 100, 0, 0.8), 0 0 30px rgba(34, 139, 34, 0.8);
+        }
+        footer{
+            margin-top: 20px;
+            text-align: center;
+            padding: 10px;
+            background: #141629;
+            color: #b3b3b3;
+            box-shadow: 0 -5px 15px rgba(0, 100, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Behtar Mustaqbil</h1>
+    <p>Empowering Communities, Shaping Futures</p>
+</header>
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="program.html">Our Programs</a>
+    <a href="donate.html">Donate</a>
+    <a href="contact.html">Contact</a>
+</nav>
+<section class="section">
+    <h2>Make a Difference</h2>
+    <p>Your donation can change lives. Help us continue our vital programs by contributing to our cause.</p>
+    <div class="donation-form">
+        <h2 style="color: #00ff00c4;">Donation Form</h2>
+        <form action="process_donation.php" method="POST">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <label for="amount">Donation Amount (in USD)</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter donation amount" min="1">
+            <label for="payment-method">Payment Method</label>
+            <select id="payment-method" name="payment-method">
+                <option value="">Select Payment Method</option>
+                <option value="credit-card">Credit Card</option>
+                <option value="paypal">PayPal</option>
+                <option value="bank-transfer">Bank Transfer</option>
+            </select>
+            <label for="payment-details">Payment Account/Transaction ID</label>
+            <input type="text" id="payment-details" name="payment-details" placeholder="Enter account number or transaction ID">
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Leave a message for us."></textarea>
+            <button type="button">Donate Now</button>
+        </form>
+    </div>
+</section>
+<footer>
+    <p>&copy; 
+        2024 Behtar Mustaqbil. All Rights Reserved.
+    </p>
+</footer>
+</body>
+</html>

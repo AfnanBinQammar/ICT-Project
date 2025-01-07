@@ -1,0 +1,2 @@
+# NGO Website
+ This website is made using HTML and CSS and a little bit animations. It is my ICT project in my first semester. It features six core pages including Home page, Login & Signup page, Contact page, Achievement page, About page and Donate page. Its theme is dark greenish and different elements like buttons are in light green color. Different images and different tags are used to make the website look beautiful. It also uses bootstrap for different things. It is my first project after learning HTML and CSS.
