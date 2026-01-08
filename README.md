@@ -1,6 +1,6 @@
 # 🌿 NGO Website Project
 
-![HTML5](https://img.shields.io/badge/Language-HTML5-orange) ![CSS3](https://img.shields.io/badge/Style-CSS3-blue) ![Bootstrap](https://img.shields.io/badge/Framework-Bootstrap-purple) ![Status](https://img.shields.io/badge/Status-Completed-success)
+![HTML](https://img.shields.io/badge/Language-HTML5-orange) ![CSS](https://img.shields.io/badge/Style-CSS3-blue) ![Bootstrap](https://img.shields.io/badge/Framework-Bootstrap-purple) ![Status](https://img.shields.io/badge/Status-Completed-success)
 
 **ICT-Project** is a responsive multi-page website designed for a Non-Governmental Organization (NGO). Developed as a first-semester ICT project, this website demonstrates core frontend web development skills using **HTML**, **CSS**, and **Bootstrap**.
 
